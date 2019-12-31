@@ -1,0 +1,61 @@
+body{
+	background-repeat:repeat;
+	background-image:url("/Test13/css/image/denglu.png");
+	background-size: 100% auto;
+	
+}
+.btn-size{
+	width: 200px;
+}
+.div-wz{
+	float: right;
+	margin-right: 150px;
+	margin-top: 250px;
+}
+.ha{ 
+	
+	width:75px;
+	height:75px;
+	border:1px solid; 
+	margin-left: 75px;
+	border-radius:50% 50%; 
+	
+	}
+img{ 
+	width:75px;
+	height:75px;
+	border-radius:50% 50%;
+	}
+
+.lg{
+	float:right;
+	width:400px;
+	height:300px;
+	margin-top:230px;
+	margin-right:50px;
+	background: rgba(10, 10, 10, 0.17);
+	border-radius: 10px;
+}
+.btn-size{
+	width: 250px;
+}
+.pwd,.name{
+	margin-top:40px;
+	margin-left:70px;
+	font-size: 20px;
+	margin-bottom: 12px;
+	letter-spacing: 1px;
+}
+.username,.password{
+	width:200px;
+	height:30px;
+	border:2px solid black;
+	letter-spacing: 1px;
+}
+.li{
+	background-color:#46f55b;
+	margin-top:40px;
+	margin-left:150px;
+	width:100px;
+	height:30px;
+}

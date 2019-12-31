@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.songbaozhen.senior1.week1.dao.SpDao">
+	<select id="listSp" resultType="com.songbaozhen.senior1.week1.entity.Sp">
+		select * from sp a LEFT JOIN pp b on a.aid=b.aid LEFT JOIN zl c on a.bid=c.bid
+		<if test="pname != null and pname != ''">
+			where a.pname like CONCAT('%',#{pname},'%')
+		</if>
+	</select>
+	<select id="listSp2"  resultType="com.songbaozhen.senior1.week1.entity.Sp">
+	select * from sp a LEFT JOIN pp b on a.aid=b.aid LEFT JOIN zl c on a.bid=c.bid where a.pid = #{pid}
+	</select>
+	<select id="listPp" resultType="pp">
+		select * from pp
+	</select>
+	
+	<select id="listZl" resultType="zl">
+		select * from zl
+	</select>
+	
+	<insert id="add">
+		insert into sp values(0,#{pname},#{ename},#{aid},#{bid},#{pcc},#{price},#{pnum},#{pbq},#{pimg})
+	</insert>
+	
+	<update id="update">
+		update sp set pname=#{pname},ename=#{ename},aid=#{aid},bid=#{bid},price=#{price},pnum=#{pnum},pbq=#{pbq},pimg=#{pimg} where pid = #{pid}
+	</update>
+	
+	<delete id="del">
+		delete from sp where pid in (#{ids})
+	</delete>
+</mapper>
